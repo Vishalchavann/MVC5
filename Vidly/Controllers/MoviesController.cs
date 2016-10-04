@@ -20,7 +20,8 @@ namespace Vidly.Controllers
                 new Customers { Name = "Customer 1"},
                 new Customers { Name = "Customer 2"},
                 new Customers { Name = "Customer 3"},
-                new Customers { Name = "Customer 4"}
+                new Customers { Name = "Customer 4"},
+                 new Customers { Name = "Customer 5"}
             };
 
 
