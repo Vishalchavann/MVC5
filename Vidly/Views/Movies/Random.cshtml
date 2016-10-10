@@ -1,22 +1,32 @@
 ﻿@*@model Vidly.ViewModels.RandomMovieViewModel*@
-@model Vidly.Models.Movie
-@{
-    ViewBag.Title = "Random";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<h2>@Model.Name</h2>
-@*@if (Model.Customers.Count.Equals(0))
+@model IEnumerable<Vidly.Models.Movie>
+   
+ @{
+        ViewBag.Title = "Random";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <h2>Movie</h2>
+    
+@if (!Model.Any())
 {
-    <text>Movie not rented yet!!!!!</text>
+    <p>We dont have any Movies in list.</p>
 }
-else
-{
-    <ul>
-        @foreach (var objCustomer in Model.Customers)
-        {
-            <li>@objCustomer.Name</li>
-        }
 
-    </ul>
 
-}*@
+  <table class="table table-bordered table-hover" >
+      <thead>
+          <tr>
+              <th>Movie</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach (var objMovie in Model)
+            {
+              <tr>
+                  <td> @Html.ActionLink(objMovie.Name, "Details", "Movies", new { id = objMovie.ID }, null) </td>
+              </tr>
+          }
+      </tbody>
+
+
+  </table>
