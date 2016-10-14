@@ -179,11 +179,28 @@
     <Compile Include="Migrations\201610051322339_InitialMigration.Designer.cs">
       <DependentUpon>201610051322339_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610130959172_AddIsSubscribedToNewsLetter.cs" />
+    <Compile Include="Migrations\201610130959172_AddIsSubscribedToNewsLetter.Designer.cs">
+      <DependentUpon>201610130959172_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610131008582_AddMemberShipType.cs" />
+    <Compile Include="Migrations\201610131008582_AddMemberShipType.Designer.cs">
+      <DependentUpon>201610131008582_AddMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610131012154_PopulateMembershipTYpe.cs" />
+    <Compile Include="Migrations\201610131012154_PopulateMembershipTYpe.Designer.cs">
+      <DependentUpon>201610131012154_PopulateMembershipTYpe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610131136104_ApplyDataAnnotationToCustomerName.cs" />
+    <Compile Include="Migrations\201610131136104_ApplyDataAnnotationToCustomerName.Designer.cs">
+      <DependentUpon>201610131136104_ApplyDataAnnotationToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -266,6 +283,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610051322339_InitialMigration.resx">
       <DependentUpon>201610051322339_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610130959172_AddIsSubscribedToNewsLetter.resx">
+      <DependentUpon>201610130959172_AddIsSubscribedToNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610131008582_AddMemberShipType.resx">
+      <DependentUpon>201610131008582_AddMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610131012154_PopulateMembershipTYpe.resx">
+      <DependentUpon>201610131012154_PopulateMembershipTYpe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610131136104_ApplyDataAnnotationToCustomerName.resx">
+      <DependentUpon>201610131136104_ApplyDataAnnotationToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
