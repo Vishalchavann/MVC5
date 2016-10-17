@@ -4,12 +4,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movie Details</h2>
+<h2>@Model.Name</h2>
 
 <ul>
     <li>
-        @Html.Label(Model.Name)
+        @Html.DisplayNameFor(c => Model.Genre) : @Html.Label(Model.Genre)
+    </li>
+    <li>
+        @Html.DisplayNameFor(c => Model.ReleseDate) : @Html.Label(Model.ReleseDate.ToString("dddddd, MMMM dd, yyyy"))
+    </li>
+
+    <li>
+        @Html.DisplayNameFor(c => Model.DateAdded) : @Html.Label(Model.DateAdded.ToString("dddddd, MMMM dd, yyyy"))
+    </li>
+    <li>
+        @Html.DisplayNameFor(c => Model.NumberInStock) : @Html.Label(Model.NumberInStock.ToString())
     </li>
 
 </ul>
+@*<div>
+
+    <fieldset>
+        @Html.DisplayForModel()
+    </fieldset>
+</div>*@
 
