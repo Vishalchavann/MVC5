@@ -12,6 +12,7 @@ namespace Vidly.Migrations
             Sql("INSERT INTO MemberShipTypes ( ID,SignUpFees,DurationInMonths ,DiscountRate)VALUES (3,90,3,15)");
             Sql("INSERT INTO MemberShipTypes ( ID,SignUpFees,DurationInMonths ,DiscountRate)VALUES (4,300,12,20)");
 
+
         }
 
         public override void Down()

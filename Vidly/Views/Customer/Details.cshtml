@@ -4,10 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@Html.Label(Model.Name)</h2>
 <ul>
+
     <li>
-        @Html.Label(Model.Name)
+        Membership TYpe: @Html.Label(Model.MemberShipType.Name)
     </li>
+    @if (Model.BirthDate != null)
+    {
+        <li>Birthdate : @String.Format("{0:d}", Model.BirthDate)</li>
+    }
 </ul>
 
