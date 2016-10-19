@@ -211,6 +211,14 @@
     <Compile Include="Migrations\201610170726522_CustomerBirthdateAdded.Designer.cs">
       <DependentUpon>201610170726522_CustomerBirthdateAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610171225378_MovieGenresAdded.cs" />
+    <Compile Include="Migrations\201610171225378_MovieGenresAdded.Designer.cs">
+      <DependentUpon>201610171225378_MovieGenresAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610171329006_RemoveMovieGenre.cs" />
+    <Compile Include="Migrations\201610171329006_RemoveMovieGenre.Designer.cs">
+      <DependentUpon>201610171329006_RemoveMovieGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -324,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610170726522_CustomerBirthdateAdded.resx">
       <DependentUpon>201610170726522_CustomerBirthdateAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610171225378_MovieGenresAdded.resx">
+      <DependentUpon>201610171225378_MovieGenresAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610171329006_RemoveMovieGenre.resx">
+      <DependentUpon>201610171329006_RemoveMovieGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

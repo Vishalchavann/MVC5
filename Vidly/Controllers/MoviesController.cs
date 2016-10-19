@@ -26,7 +26,7 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             //var objMovie = GetMovie();
-            var objMovie = _context.Movies.ToList();
+            var objMovie = _context.Movies.Include(c => c.MovieGenres).ToList();
             return View(objMovie);
         }
         
@@ -49,7 +49,7 @@ namespace Vidly.Controllers
 
         public ActionResult Details(int ID)
         {
-            var customerDet = _context.Movies.SingleOrDefault(c => c.ID.Equals(ID));
+            var customerDet = _context.Movies.Include(c => c.MovieGenres).SingleOrDefault(c => c.ID.Equals(ID));
 
 
             if (customerDet != null)
