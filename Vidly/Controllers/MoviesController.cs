@@ -22,6 +22,8 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+       
+
 
         public ActionResult Random()
         {
