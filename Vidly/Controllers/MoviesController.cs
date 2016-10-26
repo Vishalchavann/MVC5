@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 
 namespace Vidly.Controllers
 {
@@ -84,6 +85,7 @@ namespace Vidly.Controllers
             if (Movie.ID == 0)
             {
                 _context.Movies.Add(Movie);
+                
             }
             else
             {
@@ -93,8 +95,17 @@ namespace Vidly.Controllers
                 movieInDb.ReleseDate = Movie.ReleseDate;
                 movieInDb.MovieGenresID = Movie.MovieGenresID;
                 movieInDb.NumberInStock = Movie.NumberInStock;
+              
             }
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+
+                throw e;
+            }
             return RedirectToAction("GetMovie", "Movies");
         }
 

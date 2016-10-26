@@ -8,7 +8,7 @@ using System.Data.Entity.Core.Objects.DataClasses;
 
 namespace Vidly.Models
 {
-    public class Movie
+    public class Movie1
     {
         public int ID { get; set; }
         [Required]
@@ -16,20 +16,17 @@ namespace Vidly.Models
         public string Name { get; set; }
         //[Required]
         //public string Genre { get; set; }
-        
-        [Display (Name="Relese Date")]
+
+        [Display(Name = "Relese Date")]
         [Required]
         public DateTime ReleseDate { get; set; }
         //[Required]
-      
-        public DateTime DateAdded { get; set; }
-        [Display(Name ="Number In Stock")]
+
+        public DateTime? DateAdded { get; set; }
+        [Display(Name = "Number In Stock")]
         [Required]
         public int NumberInStock { get; set; }
 
         public MovieGenres MovieGenres { get; set; }
-        [Display(Name = "Genere")]
-        public byte MovieGenresID { get; set; }
-
     }
 }

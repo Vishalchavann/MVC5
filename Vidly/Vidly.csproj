@@ -223,6 +223,26 @@
     <Compile Include="Migrations\201610251216327_MoviegeneresID.Designer.cs">
       <DependentUpon>201610251216327_MoviegeneresID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610261049216_AddNullDateAddedcolumn.cs" />
+    <Compile Include="Migrations\201610261049216_AddNullDateAddedcolumn.Designer.cs">
+      <DependentUpon>201610261049216_AddNullDateAddedcolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610261102299_Added.cs" />
+    <Compile Include="Migrations\201610261102299_Added.Designer.cs">
+      <DependentUpon>201610261102299_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610261111306_movie1Added.cs" />
+    <Compile Include="Migrations\201610261111306_movie1Added.Designer.cs">
+      <DependentUpon>201610261111306_movie1Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610261114317_Movie1.cs" />
+    <Compile Include="Migrations\201610261114317_Movie1.Designer.cs">
+      <DependentUpon>201610261114317_Movie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610261203145_date.cs" />
+    <Compile Include="Migrations\201610261203145_date.Designer.cs">
+      <DependentUpon>201610261203145_date.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -230,6 +250,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Movie1.cs" />
     <Compile Include="Models\MovieGenres.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -349,6 +370,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610251216327_MoviegeneresID.resx">
       <DependentUpon>201610251216327_MoviegeneresID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261049216_AddNullDateAddedcolumn.resx">
+      <DependentUpon>201610261049216_AddNullDateAddedcolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261102299_Added.resx">
+      <DependentUpon>201610261102299_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261111306_movie1Added.resx">
+      <DependentUpon>201610261111306_movie1Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261114317_Movie1.resx">
+      <DependentUpon>201610261114317_Movie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261203145_date.resx">
+      <DependentUpon>201610261203145_date.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

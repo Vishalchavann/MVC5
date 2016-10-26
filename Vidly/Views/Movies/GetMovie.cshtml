@@ -7,7 +7,7 @@
 }
 <h2>Movie</h2>
 <h2>
-    @Html.ActionLink("New Movie", "NewMovie", "Movies", new { @class = "btn btn-default" })
+    @Html.ActionLink("New Movie", "NewMovie", "Movies", new { @class = "btn btn-primary btn-lg" })
 </h2>
 @if (!Model.Any())
 {
@@ -27,9 +27,9 @@
         @foreach (var objMovie in Model)
             {
             <tr>
-                <td> @Html.ActionLink(objMovie.Name, "Details", "Movies", new { id = objMovie.ID }, null) </td>
-                <td>@objMovie.MovieGenres.Name</td>
-                <td> @Html.ActionLink("Edit", "EditMovie", "Movies", new { id = objMovie.ID }, null) </td>
+                <td>    @Html.ActionLink(objMovie.Name, "Details", "Movies", new { id = objMovie.ID }, null) </td>
+                <td>    @objMovie.MovieGenres.Name</td>
+                <td>    @Html.ActionLink("Edit", "EditMovie", "Movies", new { id = objMovie.ID }, null) </td>
             </tr>
         }
     </tbody>
