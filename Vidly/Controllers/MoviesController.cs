@@ -82,7 +82,18 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save( Movie Movie)
         {
-            if (Movie.ID == 0)
+            if (!Movie.ID.Equals(0) && !ModelState.IsValid)
+            {
+                var viewmodel = new MovieFormViewModel
+                {
+                    Movie = Movie,
+                    MovieGenres = _context.MovieGenres.ToList()
+                };
+
+                return View("MovieForm", viewmodel);
+            }
+
+                if (Movie.ID == 0)
             {
                 _context.Movies.Add(Movie);
                 
