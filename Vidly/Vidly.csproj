@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201610171329006_RemoveMovieGenre.Designer.cs">
       <DependentUpon>201610171329006_RemoveMovieGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610251216327_MoviegeneresID.cs" />
+    <Compile Include="Migrations\201610251216327_MoviegeneresID.Designer.cs">
+      <DependentUpon>201610251216327_MoviegeneresID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customers.cs" />
@@ -230,6 +234,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -293,10 +298,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
-    <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Movies\GetMovie.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\GetCustomer.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610171329006_RemoveMovieGenre.resx">
       <DependentUpon>201610171329006_RemoveMovieGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610251216327_MoviegeneresID.resx">
+      <DependentUpon>201610251216327_MoviegeneresID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

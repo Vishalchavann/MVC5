@@ -1,0 +1,38 @@
+﻿@*@model Vidly.ViewModels.RandomMovieViewModel*@
+@model IEnumerable<Vidly.Models.Movie>
+
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Movie</h2>
+<h2>
+    @Html.ActionLink("New Movie", "NewMovie", "Movies", new { @class = "btn btn-default" })
+</h2>
+@if (!Model.Any())
+{
+    <p>We dont have any Movies in list.</p>
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+            <th>Edit Movie</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var objMovie in Model)
+            {
+            <tr>
+                <td> @Html.ActionLink(objMovie.Name, "Details", "Movies", new { id = objMovie.ID }, null) </td>
+                <td>@objMovie.MovieGenres.Name</td>
+                <td> @Html.ActionLink("Edit", "EditMovie", "Movies", new { id = objMovie.ID }, null) </td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
