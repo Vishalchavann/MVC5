@@ -1,6 +1,6 @@
 ﻿@model Vidly.ViewModels.MovieFormViewModel
 @{
-    ViewBag.Title =Model.Title;
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -17,7 +17,7 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.ReleseDate)
-        @Html.TextBoxFor(m => m.Movie.ReleseDate, "{0:d MMMM yyyy}", new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Movie.ReleseDate, "{0:d MMMM yyyy}", new { @class = "form-control", @Value = DateTime.MinValue.ToString("dd MMM yyyy") })
         @Html.ValidationMessageFor(m => m.Movie.ReleseDate)
     </div>
 
@@ -29,7 +29,8 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.NumberInStock)
-        @Html.TextBoxFor(m => m.Movie.NumberInStock, new { @class = "form-control", @Value = "0" })        @Html.ValidationMessageFor(m => m.Movie.NumberInStock)
+        @Html.TextBoxFor(m => m.Movie.NumberInStock, new { @class = "form-control", @Value = "0" })
+        @Html.ValidationMessageFor(m => m.Movie.NumberInStock)
     </div>
     @Html.HiddenFor(m => m.Movie.ID)
     @Html.AntiForgeryToken()

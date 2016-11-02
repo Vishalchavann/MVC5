@@ -19,6 +19,7 @@ namespace Vidly.Models
 
         [Display(Name = "Relese Date")]
         [Required]
+        [DefaultValue(typeof(DateTime), "DateTime.MinValue ")]
         public DateTime ReleseDate { get; set; }
         //[Required]
 
@@ -26,6 +27,7 @@ namespace Vidly.Models
         [Display(Name = "Number In Stock")]
         [Required]
         [DefaultValue("0")]
+        [Range(1,20,ErrorMessage ="The Field number in stock must be netween 1 to 20")]
         public int NumberInStock { get; set; }
 
         public MovieGenres MovieGenres { get; set; }
